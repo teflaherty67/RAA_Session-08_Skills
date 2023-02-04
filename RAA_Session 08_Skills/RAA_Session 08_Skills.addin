@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RevitAddIns>
+  <AddIn Type="Command">
+    <Text>Command RAA_Session 08_Skills</Text>
+    <Description>Some description for RAA_Session 08_Skills</Description>
+    <Assembly>RAA_Session 08_Skills.dll</Assembly>
+    <FullClassName>RAA_Session_08_Skills.Command</FullClassName>
+    <ClientId>6e669f8b-f9a6-47c9-bfa4-41fc678e646f</ClientId>
+    <VendorId>T Edward</VendorId>
+    <VendorDescription>T Edward Coder</VendorDescription>
+  </AddIn>
+  <AddIn Type="Application">
+    <Name>Application RAA_Session 08_Skills</Name>
+    <Assembly>RAA_Session 08_Skills.dll</Assembly>
+    <FullClassName>RAA_Session_08_Skills.App</FullClassName>
+    <ClientId>3fd065d9-9637-4e24-9015-6cacd312ee35</ClientId>
+    <VendorId>T Edward</VendorId>
+    <VendorDescription>T Edward Coder</VendorDescription>
+  </AddIn>
+</RevitAddIns>
