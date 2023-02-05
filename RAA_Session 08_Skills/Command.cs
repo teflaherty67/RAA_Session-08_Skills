@@ -29,8 +29,16 @@ namespace RAA_Session_08_Skills
             string filePath = doc.PathName;
             string date = DateTime.Now.ToString();
 
-            string curAssembly = System.Reflection.Assembly.GetExecutingAssembly().FullName;
+            string curAssembly = System.Reflection.Assembly.GetExecutingAssembly().GetName().Name;
             string curMethod = this.GetType().Name;
+
+            Logger curLog = new Logger(filePath, userName);
+
+            curLog.method1();
+
+            curLog.method2();
+
+            curLog.method3();
 
             return Result.Succeeded;
         }
