@@ -34,6 +34,10 @@ namespace RAA_Session_08_Skills
 
             Logger curLog = new Logger(filePath, userName);
 
+            Globals.curLog = curLog;
+            Globals.UserName = userName;
+            Globals.FilePath = filePath;
+
             curLog.method1();
 
             curLog.method2();

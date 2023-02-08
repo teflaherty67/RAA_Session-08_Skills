@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web;
+using System.IO;
 
 namespace RAA_Session_08_Skills
 {
@@ -34,6 +35,17 @@ namespace RAA_Session_08_Skills
         public void method3()
         {
 
+        }
+
+        private void WriteToFile(string message)
+        {
+            if(File.Exists(LogPath) == false)
+            {
+                string header = "Item 1, Item 2, Item 3";
+                File.WriteAllText(LogPath, header);
+            }
+
+            File.AppendAllText(LogPath, message);
         }
     }
 }

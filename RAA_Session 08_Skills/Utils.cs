@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Autodesk.Revit.UI;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,9 +9,22 @@ namespace RAA_Session_08_Skills
 {
     internal static class Utils
     {
-        internal static void method1()
+        public static void method1()
         {
-            // add method code here
+            TaskDialog.Show("Test", "The current user is" + Globals.UserName);
+        }
+
+        public static void method2()
+        {
+            try
+            {
+
+            }
+            catch (Exception)
+            {
+
+                Globals.curLog.method3();
+            }
         }
     }
 }
