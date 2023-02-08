@@ -24,7 +24,8 @@ namespace RAA_Session_08_Skills
 
         public void method1()
         {
-
+            string message = FilePath + "," + UserName + "," + DateTime.Now.ToString();
+            WriteToFile(message);
         }
 
         public void method2()
@@ -42,10 +43,10 @@ namespace RAA_Session_08_Skills
             if(File.Exists(LogPath) == false)
             {
                 string header = "Item 1, Item 2, Item 3";
-                File.WriteAllText(LogPath, header);
+                File.WriteAllText(LogPath, header + Environment.NewLine);
             }
 
-            File.AppendAllText(LogPath, message);
+            File.AppendAllText(LogPath, message + Environment.NewLine);
         }
     }
 }
