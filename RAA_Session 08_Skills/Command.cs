@@ -44,6 +44,18 @@ namespace RAA_Session_08_Skills
 
             curLog.method3();
 
+            TaskDialog td = new TaskDialog("Log Results");
+            td.MainInstruction = "Here are the log results";
+            td.MainContent = "Would you lioke to view the results?";
+            td.CommonButtons = TaskDialogCommonButtons.Yes | TaskDialogCommonButtons.No;
+
+            TaskDialogResult result = td.Show();
+
+            if (result == TaskDialogResult.Yes)
+            {
+
+            }
+
             return Result.Succeeded;
         }
     }
