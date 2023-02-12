@@ -13,18 +13,5 @@ namespace RAA_Session_08_Skills
         {
             TaskDialog.Show("Test", "The current user is" + Globals.UserName);
         }
-
-        public static void method2()
-        {
-            try
-            {
-
-            }
-            catch (Exception)
-            {
-
-                Globals.curLog.method3();
-            }
-        }
     }
 }

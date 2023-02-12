@@ -42,7 +42,14 @@ namespace RAA_Session_08_Skills
 
             curLog.method2();
 
-            curLog.method3();
+            try
+            {
+                ErrorMethod();
+            }
+            catch (Exception ex)
+            {
+                curLog.method3(curAssembly, curMethod, ex.Message);
+            }            
 
             TaskDialog td = new TaskDialog("Log Results");
             td.MainInstruction = "Here are the log results";
@@ -53,10 +60,15 @@ namespace RAA_Session_08_Skills
 
             if (result == TaskDialogResult.Yes)
             {
-
+                Process.Start("notepad.exe", curLog.LogPath);
             }
 
             return Result.Succeeded;
+        }
+
+        private void ErrorMethod()
+        {
+            throw new NotImplementedException();
         }
     }
 }
